@@ -18,7 +18,7 @@ overlay.addEventListener('click', () => {
 document.addEventListener("scroll", function() {
     const header = document.querySelector(".landing_header");
     if (window.scrollY > 50) {
-        header.style.backgroundColor = "rgba(134, 100, 65, 0.8)"; // Background color after scrolling
+        header.style.backgroundColor = "rgba(134, 100, 65, 0.4)"; // Background color after scrolling
     } else {
         header.style.backgroundColor = "transparent"; // Default background color
     }
@@ -45,3 +45,4 @@ window.onload = function () {
         landingPage.scrollIntoView({ behavior: 'smooth' });
     }
 };
+

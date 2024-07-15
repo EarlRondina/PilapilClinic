@@ -1,0 +1,141 @@
+.container-my-5 {
+	width: 100%;
+	height: 100%; /* Limit the width of the content */
+	margin: 0 auto; /*Center the content horizontally */
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.clients-text {
+	font-size: 30px;
+	margin-bottom: 0px; /* Add space below the heading */
+	font-weight: bold;
+}
+
+.appointment-button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	margin-bottom: 20px; /* Space below the button */
+}
+
+.btn-warning {
+	background-color: #a7beae;
+	color: #fff;
+	border: none;
+	padding: 10px 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.btn-danger {
+	background-color: #b85042;
+	color: #fff;
+	border: none;
+	padding: 10px 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.btn-end {
+	background-color: #a7beae;
+	color: black;
+	border: none;
+	padding: 10px 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.appointment-button:hover {
+	background-color: #0056b3;
+}
+
+.btn-danger:hover,
+.btn-warning:hover {
+	box-shadow: 3px 2px #888888;
+}
+
+.table {
+	width: 100%;
+	font-size: 0.8rem;
+	/* height: 95%; */
+	/* border-collapse: collapse; */
+}
+
+.table th,
+.table td {
+	/* border: 1px solid #ddd; */
+	padding: 10px;
+	text-align: left;
+}
+
+.table th {
+	/* background-color: #c4d4e4; */
+	border-radius: 10px;
+	position: sticky;
+	top: 0;
+	z-index: 11;
+	background-color: white;
+}
+
+.table th h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.act-head {
+	display: flex;
+	height: 5%;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ClinicName {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+/* Ensure main content area expands to fill remaining width */
+.main-content {
+	width: 80%; /* Remaining width after sidebar */
+	float: right; /* Float right to align with margin-left */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+	.Left-Nav {
+		width: 100%; /* Full width on smaller screens */
+		height: auto; /* Auto height to fit content */
+		position: static; /* Reset position for flow in document */
+		padding: 10px; /* Reduced padding for smaller screens */
+		z-index: 0; /* Reset z-index */
+	}
+
+	.container-my-5 {
+		margin-left: 0; /* No margin on smaller screens */
+		width: 100%; /* Full width */
+		padding: 10px; /* Reduced padding for smaller screens */
+	}
+
+	.main-content {
+		width: 100%; /* Full width on smaller screens */
+		float: none; /* Reset float for flow in document */
+	}
+}

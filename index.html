@@ -1,273 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
-</head>
-<body>
-    <div class="booking_container" id="booking_container">
-        <div class="form-container">
-            <form id="booking-form" method="post" action="PHP/booking.php">
-                <h2>"Pilapil Clinic Medical Booking Form"</h2>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" required>
-                    </div>
-                    <div class="last-name-mi">
-                        <div class="form-group">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" name="last-name" required>
-                        </div>
-                        <div class="form-group" style="max-width: 50px;">
-                            <label for="middle-initial">MI</label>
-                            <input type="text" id="middle-initial" name="middle-initial" maxlength="1">
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="birth-date">Birth Date</label>
-                        <input type="date" id="birth-date" name="birth-date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="age">Age</label>
-                        <input type="number" id="age" name="age" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="religion">Religion</label>
-                        <input type="text" id="religion" name="religion">
-                    </div>
-                </div>
-    
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="marital-status">Marital Status</label>
-                        <select id="marital-status" name="marital-status" required>
-                            <option value="checkup" selected hidden>Select Marital Status</option>
-                            <option value="single">Single</option>
-                            <option value="married">Married</option>
-                            <option value="divorced">Divorced</option>
-                            <option value="widowed">Widowed</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <select id="gender" name="gender" required>
-                            <option value="checkup" selected hidden>Select Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-    
-                <div class="form-group">
-                    <label for="permanent-address">Permanent Address</label>
-                    <input type="text" id="permanent-address" name="permanent-address" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="current-address">Current Address</label>
-                    <input type="text" id="current-address" name="current-address">
-                </div>
-    
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="zip-code">ZIP Code</label>
-                        <input type="text" id="zip-code" name="zip-code" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                </div>
-    
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="department">Department</label>
-                        <select id="department" name="department" required>
-                            <option value="checkup" selected hidden>Select a Department</option>
-                            <option value="general">General</option>
-                            <option value="cardiology">Cardiology</option>
-                            <option value="dermatology">Dermatology</option>
-                            <option value="neurology">Neurology</option>
-                            <option value="orthopedics">Orthopedics</option>
-                            <!-- Add more departments as needed -->
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="procedure">Procedure</label>
-                        <select id="procedure" name="procedure" required>
-                            <option value="checkup" selected hidden>Select a Procedure</option>
-                            <option value="checkup">Check-up</option>
-                            <option value="surgery">Surgery</option>
-                            <option value="therapy">Therapy</option>
-                            <option value="consultation">Consultation</option>
-                            <!-- Add more procedures as needed -->
-                        </select>
-                    </div>
-                </div>
-    
-                <div class="form-group">
-                    <label for="appointment-datetime">Appointment Date & Time</label>
-                    <input type="text" id="appointment-datetime" name="appointment-datetime" required>
-                </div>
-    
-                <button type="submit" name="submit">Book Appointment</button>
-            </form>
-        </div>
-    </div>
-    <div class="overlay" id="overlay"></div>
-    <!-- Landing-page-Home -->
-    <section class="landing_page" id="landing_page">
-        <header class="landing_header">
-            <div class="left">
-                <img src="images/LOGO.png" alt="logo" height="60px" width="60px">
-                <h2 class="logo">Pilapil Clinic</h2>
-            </div>
-            <nav class="navigation">
-                    <a href="#landing_page" class="head" id="home_anchor">Home</a>
-                    <a href="#about_page" class="head" id="about_anchor">About</a>
-                    <a href="#service_page" class="head" id="services_anchor">Services</a>
-                    <a href="#contact_us" class="head" id="contact_anchor">Contact Us</a>
-                    <button class="booking_page" id="booking_button">Booking</button>
-            </nav>
-        </header>
-        <div class="land_open">
-            <p class="landing_opening">Your Health, Our Priority.</p><br>
-            <p class="landing_opening">At Dr. Pilapil’s Clinic, we aim to provide you with the utmost care and personalized attention.</p><br>
-            <p class="landing_opening">Trust us for dedicated, top-quality healthcare tailored to your needs.</p>
-        </div>
-    </section>
-        <!-- About Page -->
-    <section class="about_page" id="about_page">
-        <div class="doc_name">
-        </div>
-        <div class="about_doc">
-            <div class="left-div"></div>
-            <div class="right-column">
-                <div class="right-div1">
-                    <h1 class="doc_name1">"Dr. Candy Krista Pilapil"</h1>
-                </div>
-                <div class="right-div2">
-                    <h2 class="doc_description">I'm a General Practitioner based in Cebu, 
-                        Philippines that provides medical consultation, 
-                        advice, treatment, management, and appropriate 
-                        referrals to both Adult and Pediatric parients.
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Services Page -->
-    <section class="service_page " id="service_page">
-        <h1 class="doc_label">Platforms Available</h1>
-        <div class="service_holder">
-            <div class="services">
-                <img class="DOC_img" src="images/doc_anywhere.png" alt="doc_anywhere">
-                <h2 class="DA">Doctor Anywhere</h2>
-                <button class="DOC_button" onclick="openInNewTab('https://www.doctoranywhere.ph/')">View</button>
-            </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="CSS/styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css" />
+	</head>
+	<body>
+		<div class="booking_container" id="booking_container">
+			<div class="form-container">
+				<form id="booking-form" method="post" action="PHP/booking.php">
+					<h2>"Pilapil Clinic Medical Booking Form"</h2>
+					<br />
+					<div class="form-row">
+						<div class="form-group">
+							<label for="first-name">First Name</label>
+							<input type="text" id="first-name" name="first-name" required />
+						</div>
+						<div class="last-name-mi">
+							<div class="form-group">
+								<label for="last-name">Last Name</label>
+								<input type="text" id="last-name" name="last-name" required />
+							</div>
+							<div class="form-group" style="max-width: 50px">
+								<label for="middle-initial">MI</label>
+								<input type="text" id="middle-initial" name="middle-initial" maxlength="1" />
+							</div>
+						</div>
+					</div>
 
-            <div class="services">
-                <img class="DOC_img" src="images/konsultaMD.png" alt="konsultaMD">
-                <h2 class="DA">KonsultaMD</h2>
-                <button class="DOC_button" onclick="openInNewTab('https://konsulta.md/')">View</button>
-            </div>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="birth-date">Birth Date</label>
+							<input type="date" id="birth-date" name="birth-date" required />
+						</div>
+						<div class="form-group">
+							<label for="age">Age</label>
+							<input type="number" id="age" name="age" required />
+						</div>
+						<div class="form-group">
+							<label for="gender">Gender</label>
+							<select id="gender" name="gender" required>
+								<option value="checkup" selected hidden>Select Gender</option>
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="current-address">Address</label>
+						<input type="text" id="current-address" name="current-address" />
+					</div>
 
-            <div class="services">
-                <img class="DOC_img" src="images/ppdClinic.png" alt="ppdClinic">
-                <h2 class="DA">PPD Clinic</h2>
-                <button class="DOC_button" onclick="openInNewTab('https://www.ppd.ph/')">View</button>
-            </div>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" required />
+						</div>
+						<div class="form-group">
+							<label for="phone">Phone Number</label>
+							<input type="tel" id="phone" name="phone" required />
+						</div>
+					</div>
 
-            <div class="services">
-                <img class="DOC_img" src="images/SeriousMD.png" alt="SeriousMD">
-                <h2 class="DA">SeriousMD</h2>
-                <button class="DOC_button" onclick="openInNewTab('https://seriousmd.com/')">View</button>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Us Page -->
-    <section class="contact_us" id="contact_us">
-        <div class="contact">
-            <div class="contact_left">
-                <div class="title">
-                    <h2>Contact Us</h2>
-                </div>
-                <div class="contact_div">
-                    <img class="end_img" src="images/doc_anywhere.png" alt="Doctor Anywhere">
-                    <p>Doctor Anywhere</p>
-                </div>
-                <div class="contact_div">
-                    <img class="end_img" src="images/konsultaMD.png" alt="konsultaMD">
-                    <p>KonsultaMD</p>
-                </div>
-            
-                <div class="contact_div">
-                    <img class="end_img" src="images/ppdClinic.png" alt="ppdClinic">
-                    <p>PPD Clinic</p>
-                </div>
-                <div class="contact_div">
-                    <img class="end_img" src="images/SeriousMD.png" alt="seriousmd">
-                    <p>SeriousMD</p>
-                </div>
-            </div>
-            <div class="contact_right">
-                <form action="PHP/send_email.php" method="post">
-                    <div class="box0">
-                        <h1>Send Us a Message</h1>
-                    </div>
-                    <div>
-                        <input class="box1" type="text" name="name" id="name" placeholder="Enter Your Name"></input>
-                    </div>
-                    <div>
-                        <input class="box1" type="text" name="email" id="email" placeholder="Enter Your Email"></input>
-                    </div>
-                    <div>
-                        <textarea class="box3" name="comment" name="comment" id="comment" cols="80" rows="7"></textarea>
-                    </div>
-                    <button class="comment_submit" type="submit">Send</button>
-                </form> 
-            </div>
-        </div>
-    </section> 
-    <!-- footer -->
-     <section class="ending">
-        <footer class="footer">
-            <div class="footer-item">
-                <i class="fas fa-map-marker-alt"></i>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="department">Department</label>
+							<select id="department" name="department" required>
+								<option value="checkup" selected hidden>Select a Department</option>
+								<option value="family medicine">Family Medicine</option>
+								<option value="primary care">Primary Care</option>
+								<option value="general practice">General Practice</option>
+								<!-- Add more departments as needed -->
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="procedure">Procedure</label>
+							<select id="procedure" name="procedure" required>
+								<option value="checkup" selected hidden>Select a Procedure</option>
+								<option value="medical management">Medical Management</option>
+								<option value="preventive care">Preventive Care</option>
+								<option value="diagnosis">Diagnosis</option>
+								<option value="treatment">Treatment</option>
+								<option value="consultation">Consultation</option>
+								<!-- Add more procedures as needed -->
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="emer-per">Emergency Person</label>
+							<input type="text" id="emer-per" name="emer-per" required />
+						</div>
+						<div class="form-group">
+							<label for="emer-num">Emergency Number</label>
+							<input type="text" id="emer-num" name="emer-num" pattern="[0-9]{11}" required />
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="appointment-datetime">Appointment Date</label>
+							<input type="text" id="appointment-datetime" name="appointment-datetime" required />
+						</div>
+						<div class="form-group">
+							<label for="appointment-time">Appointment Time</label>
+							<select id="appointment-time" name="appointment-time" required>
+								<option value="time" selected hidden>Select Time</option>
+								<option value="09:00 AM">09:00 AM</option>
+								<option value="09:30 AM">09:30 AM</option>
+								<option value="10:00 AM">10:00 AM</option>
+								<option value="10:30 AM">10:30 AM</option>
+								<option value="11:00 AM">11:00 AM</option>
+								<option value="11:30 AM">11:30 AM</option>
+								<option value="12:00 PM">12:00 PM</option>
+								<option value="12:30 PM">12:30 PM</option>
+								<option value="01:00 PM">01:00 PM</option>
+								<option value="01:30 PM">01:30 PM</option>
+								<option value="02:00 PM">02:00 PM</option>
+								<option value="02:30 PM">02:30 PM</option>
+								<option value="03:00 PM">03:00 PM</option>
+							</select>
+						</div>
+					</div>
 
-                <ion-icon name="location"></ion-icon>
-                <span>1234 Elm Street<br>Springfield, IL</span>
-            </div>
-            <div class="footer-item">
-                <i class="fas fa-phone-alt"></i>
+					<button type="submit" name="submit">Book Appointment</button>
+				</form>
+			</div>
+		</div>
+		<div class="overlay" id="overlay"></div>
+		<!-- Landing-page-Home -->
+		<section class="landing_page" id="landing_page">
+			<header class="landing_header">
+				<div class="left">
+					<img src="images/LOGO.png" alt="logo" height="60px" width="60px" />
+					<h2 class="logo">Pilapil Clinic</h2>
+				</div>
+				<nav class="navigation">
+					<a href="#landing_page" class="head" id="home_anchor">Home</a>
+					<a href="#about_page" class="head" id="about_anchor">About</a>
+					<a href="#service_page" class="head" id="services_anchor">Services</a>
+					<a href="#contact_us" class="head" id="contact_anchor">Contact Us</a>
+					<button class="booking_page" id="booking_button">Booking</button>
+				</nav>
+			</header>
+			<div class="land_open">
+				<p class="landing_opening">Your Health, Our Priority.</p>
+				<br />
+				<p class="landing_opening">At Dr. Pilapil’s Clinic, we aim to provide you with the utmost care and personalized attention.</p>
+				<br />
+				<p class="landing_opening">Trust us for dedicated, top-quality healthcare tailored to your needs.</p>
+			</div>
+		</section>
+		<!-- About Page -->
+		<section class="about_page" id="about_page">
+			<div class="doc_name"></div>
+			<div class="about_doc">
+				<div class="left-div"></div>
+				<div class="right-column">
+					<div class="right-div1">
+						<h1 class="doc_name1">"Dr. Candy Krista Pilapil"</h1>
+					</div>
+					<div class="right-div2">
+						<h2 class="doc_description">I'm a General Practitioner based in Cebu, Philippines that provides medical consultation, advice, treatment, management, and appropriate referrals to both Adult and Pediatric parients.</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Services Page -->
+		<section class="service_page" id="service_page">
+			<h1 class="doc_label">Platforms Available</h1>
+			<div class="service_holder">
+				<div class="services">
+					<img class="DOC_img" src="images/doc_anywhere.png" alt="doc_anywhere" />
+					<h2 class="DA">Doctor Anywhere</h2>
+					<button class="DOC_button" onclick="openInNewTab('https://www.doctoranywhere.ph/')">View</button>
+				</div>
 
-                <ion-icon name="call"></ion-icon>
-                <span>+1 (555) 123-4567</span>
-            </div>
-            <div class="footer-item">
-                <i class="fas fa-envelope"></i>
+				<div class="services">
+					<img class="DOC_img" src="images/konsultaMD.png" alt="konsultaMD" />
+					<h2 class="DA">KonsultaMD</h2>
+					<button class="DOC_button" onclick="openInNewTab('https://konsulta.md/')">View</button>
+				</div>
 
-                <ion-icon name="mail"></ion-icon>
-                <span>info@example.com</span>
-            </div>
-        </footer>
-    </section>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
-     <script src="Javascript/script.js"></script>
-     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-     <script src="Javascript/calendar.js"></script>
-</body>
+				<div class="services">
+					<img class="DOC_img" src="images/ppdClinic.png" alt="ppdClinic" />
+					<h2 class="DA">PPD Clinic</h2>
+					<button class="DOC_button" onclick="openInNewTab('https://www.ppd.ph/')">View</button>
+				</div>
+
+				<div class="services">
+					<img class="DOC_img" src="images/SeriousMD.png" alt="SeriousMD" />
+					<h2 class="DA">SeriousMD</h2>
+					<button class="DOC_button" onclick="openInNewTab('https://seriousmd.com/')">View</button>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Us Page -->
+		<section class="contact_us" id="contact_us">
+			<div class="contact">
+				<div class="contact_left">
+					<div class="title">
+						<h2>Contact Us</h2>
+					</div>
+					<div class="contact_div">
+						<img class="end_img" src="images/doc_anywhere.png" alt="Doctor Anywhere" />
+						<p>Doctor Anywhere</p>
+					</div>
+					<div class="contact_div">
+						<img class="end_img" src="images/konsultaMD.png" alt="konsultaMD" />
+						<p>KonsultaMD</p>
+					</div>
+
+					<div class="contact_div">
+						<img class="end_img" src="images/ppdClinic.png" alt="ppdClinic" />
+						<p>PPD Clinic</p>
+					</div>
+					<div class="contact_div">
+						<img class="end_img" src="images/SeriousMD.png" alt="seriousmd" />
+						<p>SeriousMD</p>
+					</div>
+				</div>
+				<div class="contact_right">
+					<form action="PHP/send_email.php" method="post">
+						<div class="box0">
+							<h1>Send Us a Message</h1>
+						</div>
+						<div>
+							<input class="box1" type="text" name="name" id="name" placeholder="Enter Your Name" />
+						</div>
+						<div>
+							<input class="box1" type="text" name="email" id="email" placeholder="Enter Your Email" />
+						</div>
+						<div>
+							<textarea class="box3" name="comment" name="comment" id="comment" cols="80" rows="7"></textarea>
+						</div>
+						<button class="comment_submit" type="submit">Send</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- footer -->
+		<section class="ending">
+			<footer class="footer">
+				<div class="footer-item">
+					<i class="fas fa-map-marker-alt"></i>
+
+					<ion-icon name="location"></ion-icon>
+					<span>1234 Elm Street<br />Springfield, IL</span>
+				</div>
+				<div class="footer-item">
+					<i class="fas fa-phone-alt"></i>
+
+					<ion-icon name="call"></ion-icon>
+					<span>+1 (555) 123-4567</span>
+				</div>
+				<div class="footer-item">
+					<i class="fas fa-envelope"></i>
+
+					<ion-icon name="mail"></ion-icon>
+					<span>info@example.com</span>
+				</div>
+			</footer>
+		</section>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+		<script src="Javascript/script.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script src="Javascript/calendar.js"></script>
+	</body>
 </html>

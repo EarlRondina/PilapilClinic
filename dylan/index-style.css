@@ -1,0 +1,21 @@
+.appointment-button {
+	border-radius: 3px;
+	float: right;
+	margin-bottom: 10px;
+	text-align: center;
+	background-color: rgb(201, 224, 255);
+	border: none;
+	padding: 7px;
+	font-weight: bold;
+}
+
+.appointment-button:hover {
+	box-shadow: 7px 5px 10px grey;
+}
+
+.nav-bar {
+	background-color: blue;
+	color: red;
+	float: left;
+	height: 100%;
+}
